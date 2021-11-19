@@ -15,7 +15,7 @@ const verifyToken = async (req, res, next) => {
 
         try {
             // verify jwt
-            const data = await jwt.verify(bearerToken, process.env.Token_Secret)
+            const data = await jwt.verify(bearerToken, process.env.TOKEN_SECRET)
 
             const user = await User.findOne({
                 where: { id: data.id }
