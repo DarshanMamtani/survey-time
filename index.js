@@ -26,7 +26,7 @@ let storage = multer.diskStorage({
     },
     filename: function (req, file, cb) {
         /*Appending extension with original name*/
-        cb(null, file.originalname + path.extname(file.originalname))
+        cb(null, file.originalname)
     }
 })
 const upload = multer({ storage: storage });
