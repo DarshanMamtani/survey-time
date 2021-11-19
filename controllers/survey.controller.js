@@ -113,7 +113,7 @@ const takeSurvey = async (req, res) => {
 
         if (surveyQuestions.length === 0) {
             return res.status(404).send({
-                message: "So Survey Found!"
+                message: "No Survey Found!"
             });
         }
 
