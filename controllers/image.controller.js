@@ -19,7 +19,7 @@ const resizeImage = async (req, res) => {
         const image = req.file;
         const thumbnail = await resizer(image.path, setup);
         res.status(200).send({
-            url: thumbnail[0].substr(8)
+            url: ("https://survey-time-darshan.herokuapp.com" + thumbnail[0].substr(8))
         });
     } catch (error) {
         res.send(error)
